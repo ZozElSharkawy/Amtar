@@ -1,0 +1,1545 @@
+@import url(https://db.onlinewebfonts.com/c/aba1a083bf50980a05f0265179103a09?family=DIN+Next+LT+Arabic+Medium);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DIN Next LT Arabic Medium';
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+.navbar-brand img {
+    max-height: 60px;
+}
+
+.navbar-brand span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-right: 10px;
+    color: #333;
+}
+
+
+/* الأيقونات */
+
+.navbar .d-flex a {
+    margin-left: 4px;
+}
+
+
+/* Slider */
+
+.slider1 {
+    position: relative;
+    width: 95%;
+    height: 600px;
+    margin: 20px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
+}
+
+.slider1:hover .slide.active img {
+    filter: brightness(90%);
+    transition: filter 0.3s ease;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.download-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    opacity: 0.9;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+}
+
+.download-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    background: rgba(53, 49, 49, 0.15);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 12px 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    z-index: 15;
+}
+
+.download-btn i {
+    font-size: 20px;
+    color: #ffd700;
+    /* gold icon for visibility */
+}
+
+.download-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+
+/* Glass Card */
+
+.glass-card {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    max-width: 450px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Add noise effect */
+
+.glass-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    opacity: 0.9;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+}
+
+.glass-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.glass-card-top img {
+    max-height: 60px;
+    max-width: 60px;
+    border-radius: 6px;
+}
+
+.glass-card h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.glass-card p {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.glass-card .more-link {
+    color: #ffd700;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* Slider1 Navigation Buttons */
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.nav-btn.left {
+    right: 10px;
+}
+
+.nav-btn.right {
+    left: 10px;
+}
+
+
+/*Projects*/
+
+
+/* Decorative line above section */
+
+.projects-section::before {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    margin-bottom: 30px;
+    background: linear-gradient(to right, transparent, #ffd700, transparent);
+    opacity: 0.9;
+}
+
+.projects-section {
+    max-width: 80%;
+    margin: 50px auto;
+    padding: 0 15px;
+}
+
+.projects-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.projects-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.projects-header p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 8px;
+}
+
+
+/* Project Carousel */
+
+.projects-wrapper {
+    position: relative;
+}
+
+.projects-carousel {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    flex-wrap: nowrap;
+    /* keep items in one row for carousels */
+}
+
+.projects-carousel>* {
+    scroll-snap-align: start;
+}
+
+.projects-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Dots styling (used by projects, services, cities) */
+
+.carousel-dots {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.carousel-dots button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.carousel-dots button.active {
+    opacity: 1;
+}
+
+.project-card {
+    flex: 0 0 250px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    overflow: visible;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Circle above cut */
+
+.circle {
+    position: absolute;
+    top: 135px;
+    /* overlaps the cut */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #ddd;
+    border: 3px solid #fff;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-image {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ffffff;
+    color: #000000;
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: none;
+}
+
+
+/* ensure like toggle sits top-left without inline styles */
+
+.project-image .like-toggle {
+    top: 10px;
+    left: 10px;
+    right: auto;
+}
+
+.project-content {
+    width: 85%;
+    /* narrower than card */
+    margin: 0 auto;
+    /* center it */
+    background: #fff;
+    border-radius: 12px;
+    padding: 60px 12px 16px;
+    text-align: center;
+    position: relative;
+    top: -10px;
+    /* small lift to tuck under image */
+    z-index: 1;
+}
+
+.project-content h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.project-content p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.project-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+}
+
+.riyal-icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+}
+
+
+/* Project Carousel nav buttons */
+
+.proj-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3;
+    /* keep above carousel items */
+}
+
+.proj-nav-btn.left {
+    right: -60px;
+}
+
+.proj-nav-btn.right {
+    left: -60px;
+}
+
+
+/* Keep buttons inside on smaller screens */
+
+@media (max-width: 1024px) {
+    .proj-nav-btn.left {
+        right: 10px;
+    }
+    .proj-nav-btn.right {
+        left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .proj-nav-btn.left {
+        right: 6px;
+    }
+    .proj-nav-btn.right {
+        left: 6px;
+    }
+}
+
+
+/* Services carousel: mirror projects carousel styles */
+
+.services-wrapper {
+    position: relative;
+}
+
+.services-carousel {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    flex-wrap: nowrap;
+}
+
+.services-carousel>* {
+    scroll-snap-align: start;
+}
+
+.services-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.serv-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.serv-nav-btn.left {
+    right: -60px;
+}
+
+.serv-nav-btn.right {
+    left: -60px;
+}
+
+@media (max-width: 1024px) {
+    .serv-nav-btn.left {
+        right: 10px;
+    }
+    .serv-nav-btn.right {
+        left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .serv-nav-btn.left {
+        right: 6px;
+    }
+    .serv-nav-btn.right {
+        left: 6px;
+    }
+}
+
+
+/*Photos phrame*/
+
+.photo-frame {
+    position: sticky;
+    width: 80%;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photo {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.photo.big img {
+    width: 100%;
+    display: block;
+    border-radius: 16px;
+}
+
+.photo.small {
+    position: absolute;
+    bottom: -80px;
+    right: 25px;
+    width: 55%;
+}
+
+.photo.small img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+
+
+/* Navigation Tabs */
+
+.nav-tabs {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 16px;
+}
+.tab-btn{
+    background: none;
+    border: none;
+    padding: 16px 20px;
+    font-size: 23px;
+    color: #666;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+.tab-btn.active{
+    color: #4caf50;
+    border-bottom: 2px solid #4caf50;
+    font-weight: 550;
+}
+
+/* Property Card */
+
+.property-card {
+    width: 80%;
+    margin: 16px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.property-image {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.property-badge-text {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    /* swapped: text now on the edge in RTL */
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.property-badge {
+    position: absolute;
+    top: 16px;
+    right: 96px;
+    /* swapped: badge moved left of text in RTL */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.property-price,
+.property-specs {
+    display: flex;
+}
+
+.property-price img {
+    width: 20px;
+    height: 20px;
+    margin-left: 4px;
+}
+
+
+/* Real Estate Requests Section */
+
+.requests-section {
+    padding: 16px;
+    background-color: white;
+    margin-top: 8px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.section-header h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.view-all {
+    color: #007AFF;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.request-card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.requests-wrapper {
+    position: relative;
+}
+
+.requests-carousel {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.requests-carousel .request-card {
+    flex: 0 0 320px;
+}
+
+.requests-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.requests-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.requests-nav-btn.left {
+    right: -10px;
+}
+
+.requests-nav-btn.right {
+    left: -10px;
+}
+
+.request-card {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: #fafafa;
+}
+
+.request-icon {
+    flex-shrink: 0;
+}
+
+.request-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.request-content p {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.request-details p {
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.contact-btn {
+    background-color: #007AFF;
+    color: white;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background-color 0.2s;
+}
+
+.contact-btn:hover {
+    background-color: #0056CC;
+}
+
+
+/* Green box*/
+
+.greencard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #00332e, #062925);
+    color: white;
+    border-radius: 15px;
+    padding: 15px;
+    width: 85%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.greencard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-images {
+    display: flex;
+}
+
+.profile-images img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-left: -10px;
+}
+
+.greenbadge {
+    display: flex;
+    align-items: center;
+    background-color: #178862;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+
+.redbadge {
+    display: flex;
+    align-items: center;
+    background-color: #e63946;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+
+.redbadge span {
+    margin-left: 5px;
+}
+
+.greencard-content {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: right;
+}
+
+.greencard-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.cardarrow {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    color: #00332e;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* Services Section */
+
+.services-section {
+    padding: 16px;
+    background-color: white;
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.service-wrapper {
+    position: relative;
+}
+
+.services-carousel {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.service-card {
+    flex: 0 0 360px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 24px;
+    min-height: 160px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: #fafafa;
+    text-align: right;
+    gap: 16px;
+}
+
+.service-content {
+    flex: 1;
+}
+
+.service-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-content p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.service-icon {
+    flex-shrink: 0;
+    align-self: flex-end;
+}
+
+
+/* Map Section */
+
+.map-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+}
+
+.map-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e8f0fe;
+}
+
+.map-content {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 20px;
+}
+
+.map-text {
+    text-align: right;
+}
+
+.map-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.map-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-background {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.map-arrow:hover {
+    background-color: #f0f0f0;
+    transform: translateX(-3px);
+}
+
+/* Cities Section */
+
+.cities-section {
+    padding: 16px;
+    background-color: white;
+    margin-top: 8px;
+}
+
+.cities-grid {
+    display: flex;
+    gap: 12px;
+}
+
+
+/* make each city item larger in carousel */
+
+.cities-grid>div {
+    flex: 0 0 340px;
+    /* increased width */
+    max-width: 340px;
+}
+
+.city-card {
+    flex: 1;
+    position: relative;
+    height: 240px;
+    /* bigger cards */
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+    /* center text overlay vertically */
+    justify-content: center;
+    /* center text overlay horizontally */
+}
+
+.city-card:hover {
+    transform: scale(1.02);
+}
+
+.city-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* dark overlay */
+
+.city-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+}
+
+.city-name {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: transparent;
+    font-size: 24px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+
+/*About Section*/
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+}
+
+.about-section .description {
+    text-align: center;
+}
+
+.greeting {
+    color: #495986;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin: 25px;
+}
+
+.morebtn {
+    font-size: 1.2rem;
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    background-color: white;
+    color: #687aaa;
+    border: 2px solid #788bbe;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+
+/* CTA wide banner above partners */
+
+.cta-wide {
+    max-width: 1200px;
+    width: 90%;
+    margin: 20px auto;
+    background: #ffd700;
+    color: #333;
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.cta-text {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.cta-btn {
+    background: #fff;
+    color: #333;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+/* FAQ Section */
+
+.faq-section {
+    padding: 40px 0;
+    background-color: #f8f9fa;
+    width: 80%;
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 34px;
+    color: #495986;
+    margin-bottom: 10px;
+}
+
+.faq-subtitle {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.faq-description {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.faq-list {
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    background-color: white;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.faq-question:hover {
+    background-color: #f8f9fa;
+}
+
+.faq-icon {
+    color: #6c5ce7;
+    font-size: 20px;
+    font-weight: bold;
+    min-width: 20px;
+}
+
+.load-more-btn {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    background-color: white;
+    color: #788bbe;
+    border: 2px solid #788bbe;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.load-more-btn:hover {
+    background-color: #f8f9fa;
+    border-color: #6274a7;
+}
+
+
+/* Partners Section */
+
+.partners-section {
+    padding: 40px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.partners-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.partners-logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.partner-logo img {
+    max-width: 120px;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.2s;
+}
+
+.partner-logo img:hover {
+    filter: grayscale(0%);
+}
+
+
+.app-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f9fa;
+    margin: 25px 0;
+    border-radius: 12px;
+    gap: 20px;
+}
+
+.app-info {
+    flex: 1;
+    text-align: right;
+}
+
+.app-title {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.appdescription {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.appdownload-btn {
+    border-color: #212fee;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #212fee;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.appdownload-btn:hover {
+    background-color: #5a4fcf;
+}
+
+.app-image img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 8px;
+}
+
+.bottom-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.bottom-logos img {
+    max-width: 200px;
+    height: auto;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.bottom-logos img:hover {
+    opacity: 1;
+}
+
+.footer {
+    background: #292b2c;
+    color: #f1f1f1;
+    padding: 20px 0;
+}
+
+.footer h5 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer p,
+.footer ul {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+    color: #ffd700;
+}
+
+.footer .text-center {
+    border-top: 1px solid #444;
+    padding-top: 15px;
+    font-size: 14px;
+}
+
+
+/* Phone responsiveness */
+
+@media (max-width: 480px) {
+    .slider1 {
+        height: 720px;
+        width: 100%;
+    }
+    .projects-section {
+        max-width: 95%;
+        margin: 24px auto;
+    }
+    .project-card {
+        flex: 0 0 260px;
+    }
+    .proj-nav-btn.left {
+        right: 6px;
+    }
+    .proj-nav-btn.right {
+        left: 6px;
+    }
+    .services-section {
+        padding: 12px;
+    }
+    .service-card {
+        flex: 0 0 280px;
+        padding: 16px;
+        min-height: 140px;
+    }
+    .requests-carousel .request-card {
+        flex: 0 0 280px;
+    }
+    .property-card {
+        width: 95%;
+    }
+    .property-image {
+        height: 500px;
+    }
+    .map-section {
+        width: 95%;
+    }
+    .map-content {
+        grid-template-columns: 120px 1fr auto;
+    }
+    .cities-grid>div {
+        flex: 0 0 260px;
+        max-width: 280px;
+    }
+    .city-card {
+        height: 160px;
+    }
+    .city-name {
+        font-size: 20px;
+    }
+    .carousel-dots button {
+        font-size: 14px;
+    }
+    .main-title{
+        font-size:2.5rem
+    }
+    .cta-wide {
+        width: 99%;
+        font-size: 12px;
+        padding: 12px 14px;
+    }
+    .morebtn,
+    .load-more-btn {
+        width: 90%;
+    }
+    .appdownload-btn {
+        width: 90%;
+        max-height: 62px;
+    }
+    .bottom-logos img {
+        max-width: 150px;
+    }
+}
+
+
+/* Services Section */
+
+.services-section {
+    padding: 30px 10px;
+    background: #fff;
+    margin-top: 10px;
+    position: relative;
+    max-width: 1200px;
+}
+
+.services-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.services-carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.services-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.service-card {
+    flex: 0 0 300px;
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    min-height: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.service-content h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.service-content p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.service-icon {
+    flex-shrink: 0;
+}
+
+
+/* Navigation Buttons */
+
+.serv-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s ease;
+}
+
+.serv-nav-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.serv-nav-btn.left {
+    right: 10px;
+}
+
+.serv-nav-btn.right {
+    left: 10px;
+}
+
+
+/* Dots */
+
+.carousel-dots {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.carousel-dots button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.carousel-dots button.active {
+    color: #333;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .service-card {
+        flex: 0 0 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        flex: 0 0 90%;
+    }
+}
